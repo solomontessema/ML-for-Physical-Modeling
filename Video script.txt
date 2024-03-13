@@ -1,0 +1,61 @@
+
+Machine learning has been used in physical modeling and simulation to improve the accuracy and efficiency of simulations. For example, NVIDIA Modulus is an open-source physics-ML platform that blends physics with deep learning training data to build high-fidelity, parameterized surrogate models with near-real-time latency. Engineers and scientists can explore and build physics-based AI surrogate models using NVIDIA Modulus.
+
+In addition, physics-based simulation models can be used to test, correct, and retest machine learning algorithms under a range of scenarios and at a scale not practicable with physical testing 2. Machine learning-based multiscale modeling and simulation of materials has also been used in composite homogenization, defect mechanics modeling, and material design
+
+
+Machine learning-accelerated computational fluid dynamics” by Kochkov et al. is a paper that explores the utilization
+of deep learning techniques embedded inside traditional
+fluid equations to enhance the precision of fluid dynamics
+simulations. The study illustrates how the integration of
+machine learning methodologies can yield advancements
+in the field of scientific computation, with an emphasis on
+enhancing simulation accuracy and generalization in fluid
+mechanics.
+The research paper highlights the application of end-toend deep learning methodologies to refine approximations
+within the domain of computational fluid dynamics, specifically for the modeling of two-dimensional turbulent flows.
+
+
+
+
+
+
+
+This is Navier-Stokes equations for incompressible and Newtonian fluids. The equations can be derived from the conservation of mass and momentum principles, and they relate the velocity, pressure, density, viscosity, and external forces of a fluid. The equations are:
+
+Continuity equation: This equation states that the net flow of mass into or out of a fluid element must be zero. It is expressed as:
+
+∇⋅u=0
+where u is the velocity vector of the fluid.
+
+Momentum equation: This equation states that the rate of change of momentum of a fluid element is equal to the sum of the pressure, viscous, and external forces acting on it. It is expressed as:
+
+ρ∂t∂u​+ρ(u⋅∇)u=−∇p+μ∇2u+f
+
+
+
+
+where ρ is the density, p is the pressure, μ is the viscosity, and f is the external force per unit volume.
+
+The Navier-Stokes equations are very important in fluid mechanics, as they can be used to model a wide range of phenomena, such as weather, ocean currents, blood flow, aerodynamics, and more. However, they are also very difficult to solve analytically, and often require numerical methods or simplifying assumptions. 
+One of the most challenging open problems in mathematics is to prove the existence and smoothness of solutions to the Navier-Stokes equations in three dimensions
+
+Yes, machine learning algorithms have been used to solve the Navier-Stokes equation. The Navier-Stokes equation is a partial differential equation that describes the motion of fluids 1. It is notoriously difficult to solve, and researchers have been exploring the use of machine learning to speed up the process of solving it 1. For example, researchers at Caltech have introduced a new deep-learning technique for solving partial differential equations that is dramatically more accurate than deep-learning methods developed previously. It’s also much more generalizable, capable of solving entire families of PDEs—such as the Navier-Stokes equation for any type of fluid—without needing retraining. Finally, it is 1,000 times faster than traditional mathematical formulas, which would ease our reliance on supercomputers and increase our computational capacity to model even bigger problems 1.
+
+
+
+Machine learning–accelerated computational fluid dynamics is a paper by Dimitrii Kochkov, et al proposes  embedding a machine learning algorithm in Computational fluid dynamics.
+
+The paper aims to improve the accuracy and efficiency of computational fluid dynamics (CFD) simulations by integrating machine learning (ML) techniques into the traditional numerical solvers.
+The paper proposes an end-to-end deep learning approach that embeds ML models inside the Navier-Stokes equations, which govern the fluid dynamics. The ML models learn local operators for convective fluxes and residual terms, which are often approximated by numerical methods.
+The paper demonstrates that the proposed approach can achieve comparable accuracy with baseline solvers but at significantly reduced computational costs. The approach also shows stability during long simulations and generalization beyond the training conditions.
+The paper presents a novel way of combining ML and CFD to enhance the simulation of two-dimensional turbulent flows, which are challenging to model by traditional methods. The paper also provides insights into the interpretability and scalability of the proposed approach.
+
+The imbeded Machine-learning algorithm, (as said earlier the algorithm is embeded inside CFD simulation  as shown in the graph, for a two dimensional direct numerical simulation of a
+turbulent flow, our algorithm maintains accuracy while using 10× coarser resolution in each dimension, resulting in a ∼ 80 fold improvement in computational time
+with respect to an advanced numerical method of similar accuracy
+
+The x axis corresponds to pointwise accuracy, showing how
+long the simulation is highly correlated with the ground truth,
+whereas the y-axis shows the computational time needed to
+carry out one simulation time-unit on a single TPU core.
